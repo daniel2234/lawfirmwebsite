@@ -1,0 +1,344 @@
+body,
+html {
+    color: white;
+    font-weight: lighter;
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    background-color: black;
+    font-family: 'Droid Serif', serif;
+    letter-spacing: 0.07em;
+    line-height: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    transition: all 200ms ease-out;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+h3 {
+    color: white;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+section {
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+    min-height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+section:before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.bg-1:before {
+    background-image: url("../img/law-firm-one.jpg");
+}
+
+section.bg-2:before {
+    background-image: url("../img/law-firm-two.jpg");
+}
+
+section.bg-3:before {
+    background-image: url("../img/law-firm-three.jpg");
+}
+
+section>.content-container {
+    padding: 15%;
+    background-color: rgba(16,125,172, 0.85);
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.content-container.no-padding {
+    padding: 0;
+}
+
+section:nth-child(2n)>.content-container {
+    background: #131313;
+}
+
+.footer {
+    text-align: center;
+    margin: 0 auto;
+    min-height: 250px;
+}
+
+.logo {
+    width: 30%;
+}
+
+.floating-box {
+    margin-right: -4px;
+    padding: 25px 10px 25px 10px;
+    width: 25%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.floating-box.half {
+    padding: none;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.contact-form {
+    padding: 15%;
+}
+
+.submit {
+    cursor: pointer;
+    margin-top: 30px;
+    display: block;
+    height: 50px;
+    border: none;
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    transition: all 200ms ease-in;
+}
+
+.submit:hover {
+    background-color: rgba(153, 0, 0, 0.85);
+}
+
+input,
+textarea {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    color: white;
+    font-weight: lighter;
+    font-size: 16px;
+    font-family: 'Droid Serif', serif;
+    letter-spacing: 0.07em;
+    line-height: 1.2em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+textarea {
+    height: 85px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-map-container {
+    display: none;
+}
+
+.mobile-map-container>.content-container {
+    height: 300px;
+}
+
+.mobile-map-container .map {
+    height: 102%;
+}
+
+.autoheight {
+    min-height: auto;
+    height: auto;
+}
+
+ul.awards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.awards>li {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 420px) {
+    section>.content-container {
+        padding: 8%;
+    }
+}
+
+@media (max-width: 720px) {
+    .floating-box,
+    .floating-box.half {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .floating-box.map-container {
+        display: none;
+    }
+    .map {
+        height: auto;
+    }
+    .mobile-map-container {
+        display: table;
+    }
+    section:before {
+        z-index: 1;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-attachment: initial;
+        background-size: cover;
+    }
+}
+
+div.menu-btn {
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+div.menu-btn a {
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+}
+
+div.shape {
+    position: absolute;
+    width: 60%;
+    background-color: white;
+    height: 3px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+div#bar1 {
+    top: 21px;
+    transform: translateY(-5px) rotateZ(0deg);
+    transition: all 0.5s ease-in-out;
+}
+
+div#bar2 {
+    top: 21px;
+    transform: translateY(5px) rotateZ(0deg);
+    transition: all 0.5s ease-in-out;
+}
+
+div#bar1.shift {
+    transform: translateY(0px) rotateZ(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+div#bar2.shift {
+    transform: translateY(0px) rotateZ(-45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+ul.mobile-nav {
+    margin: 0;
+    padding-top: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    max-width: 300px;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.90);
+    list-style: none;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+    display: block;
+}
+
+ul.mobile-nav.appear {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+ul.mobile-nav>li {
+    margin-bottom: 3em;
+}
+
+ul.mobile-nav>li a {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+}
+
+ul.mobile-nav>li a:hover {
+    color: white;
+}
+
+@keyframes rotate-1 {
+    from {
+        /*transform: translateY(-50%) rotate(0deg);*/
+        opacity: 0;
+    }
+    to {
+        /*transform: translateY(-50%) rotate(45deg);*/
+        opacity: 1;
+    }
+}
+
+@keyframes rotate-2 {
+    from {
+        transform: translateY(-50%) translateX(0) rotate(45deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-50%) translateX(-50%) rotate(45deg);
+        opacity: 0.85;
+    }
+}
+
+@keyframes rotate-3 {
+    from {
+        transform: translateY(-50%) translateX(0) rotate(45deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-50%) translateX(50%) rotate(45deg);
+        opacity: 0.85;
+    }
+}
